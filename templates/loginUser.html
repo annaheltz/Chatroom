@@ -1,0 +1,23 @@
+<h2>Login</h2>
+
+
+     
+<form action="{{ url_for('loginFunction', what = 'login') }}" method = "post">
+
+  <input type="text" name="Username" >
+  <input type="password" name="Password" >
+
+  <input class = "loginButton" type="submit" value = "Login">
+</form>
+
+<br>
+
+<form action="{{ url_for('loginFunction', what = 'logout') }}" method = "post">
+
+    <input type="submit" value = "Back">
+
+</form>
+
+
+<!-- do we have to return to original page -->
+

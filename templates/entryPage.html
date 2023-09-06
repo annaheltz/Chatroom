@@ -1,0 +1,16 @@
+<h1>Welcome to the Chatroom Database</h1>
+<h3>Log in or Create an Account!</h3>
+
+<form action="{{ url_for('entryPageMethods', what = 'login' ) }}" method="get">
+  <dl>
+    <dd><input type="submit" value="Login">
+  </dl>
+</form>
+
+
+<form action="{{ url_for('entryPageMethods', what = 'create' ) }}" method="get">
+  <dl>
+    <dd><input type="submit" value="Create Account">
+  </dl>
+</form>
+

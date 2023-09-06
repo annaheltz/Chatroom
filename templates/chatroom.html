@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="{{ url_for('static', filename='chatMessages.js') }}"></script>
+
+
+    </head>
+
+    <body>
+
+        <h1> Welcome to {{name}}</h1>    
+        
+        <div id = "delete" style = "visibility: hidden;">
+            <p id = "deleteMessage">This chat room has been deleted, click Leave Room to leave room.</p>
+        </div>
+
+        <table id = "chatTable">
+            <!-- {% for chat in oldChats %}
+                <tr>{{chat.message}}</tr><br>
+            {% endfor %} -->
+            {% for chat in chats %}
+                <tr> chat </tr>
+            {%endfor%}
+        </table>
+
+
+
+        <form name="chat" id = "chat1">
+			<input type="text" id="message" name="Chat Message" value="" />
+			<input type="button" id="theButton" value="Post"/>
+		</form>
+
+        
+
+        <br>
+        <form action="{{ url_for('chatroomFunction', what = 'leave') }}" method = "post">
+
+            <input type="submit" value = "Leave Chatroom">
+
+        </form>
+
+        <br>
+        <form action="{{ url_for('chatroomFunction', what = 'logout') }}" method = "post">
+
+            <input type="submit" value = "Logout">
+
+        </form>
+        
+    </body>
+</html>

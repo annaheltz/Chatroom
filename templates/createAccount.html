@@ -1,0 +1,18 @@
+<h1> Create Account </h1>
+
+     
+<form action="{{ url_for('createAccountFunction', what = 'create') }}" method = "post">
+
+    <input type="text" name="Username">
+    <input type="password" name="Password">
+
+    <input class = "loginButton" type="submit" value = "Signup">
+</form>
+
+<form action="{{ url_for('createAccountFunction', what = 'logout') }}" method = "post">
+
+    <input type="submit" value = "Back">
+
+</form>
+
+<!-- do we have to return to original page -->

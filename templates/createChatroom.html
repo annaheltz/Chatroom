@@ -1,0 +1,15 @@
+<h1> Create Your Chatroom</h1>
+
+<form action="{{ url_for('createRoomFunction', what = 'create') }}" method = "post">
+
+    <input type="text" name="Roomname">
+    <input type="submit" value = "Create Room">
+
+</form>
+
+<br>
+<form action="{{ url_for('createRoomFunction', what = 'logout') }}" method = "post">
+
+    <input type="submit" value = "Logout">
+
+</form>
